@@ -1,3 +1,5 @@
+// Here node:true added so that the eslint related issus doesn't occur
+
 module.exports = {
   root: true,
   env: { browser: true, es2020: true, node:true },
