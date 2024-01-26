@@ -1,8 +1,4 @@
-import { GiHouse } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { IoLocationSharp } from "react-icons/io5";
-import { AiFillLayout } from "react-icons/ai";
-import { MdAttachMoney } from "react-icons/md";
 import { RiCalendarTodoLine } from "react-icons/ri";
 import Lottie from "lottie-react";
 import task from "../../../public/task.json"
@@ -11,7 +7,7 @@ const Hero = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="">
-            <div className="flex justify-center mb-3">
+            <div className="flex justify-center">
             <div className="w-72">
             <Lottie animationData={task} loop={true} />
             </div>

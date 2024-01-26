@@ -96,8 +96,7 @@ const Ongoing = () => {
           )}
         </div>
       )}
-
-      
+      <Toaster position="bottom-center" reverseOrder={false} />
     </div>
   );
 };
