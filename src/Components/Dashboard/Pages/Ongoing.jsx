@@ -1,6 +1,5 @@
 import { FaUser } from "react-icons/fa";
 import { MdOutlineDateRange } from "react-icons/md";
-import Swal from "sweetalert2";
 import useAxiosClient from "../../Hooks/useAxiosClient";
 import useAllTasks from "../../Hooks/useAllTasks";
 import Header from "./Header";

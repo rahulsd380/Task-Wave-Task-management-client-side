@@ -3,20 +3,20 @@
 "Welcome to TaskWave, your dynamic task management solution! TaskWave simplifies your workflow, offering intuitive tools for efficient task organization, collaboration, and goal achievement. Dive into a user-friendly experience where productivity meets simplicity. Join TaskWave and elevate your task management journey!
 
 ## Live Link
-You can access the live version of this project here: [View Site](https://task-management-25949.web.app/)
+You can access the live version of this project here: [View Site](https://65b383b984da54a85a08f091--shimmering-taffy-54fc1d.netlify.app/)
 
 ## Project Description
 "TaskWave simplifies your workflow, offering intuitive tools for efficient task organization, collaboration, and goal achievement. Dive into a user-friendly experience where productivity meets simplicity. Join TaskWave and elevate your task management journey!"
 
 ## Features
-- **Feature 0:** Responsive Design - Enjoy a seamless experience on all devices for efficient task management.
-- **Feature 1:** Create New Task - User can create new task after successfull sign up/ sign in from their dashboard.
-- **Feature 2:** Manage Task - User can manage their tasks from "Manage All Task" section.
-- **Feature 3:** View Task - Easily visualize your tasks in a clear and organized table format. Each task is displayed with essential details.
-- **Feature 4:** Delete Tasks - Remove the unnecessary tasks. Just go to "Manage All Task" section and then click on the delete button. You can delete the specific task as well.
-- **Feature 5:** Update Tasks - Modify task details on-the-fly with the ability to edit titles, descriptions, deadlines, and priority levels. Keep your task information accurate and up-to-date.
-- **Feature 6:** Filter Task - Filter task based on their priority levels.
-- **Feature 7:** Categorize Task - You can categorized task as to-do, on-going add completed from the dashboard.
+- **Feature 1:** Responsive Design - Enjoy a seamless experience on all devices for efficient task management.
+- **Feature 2:** Create New Task - User can create new task after successfull sign up/ sign in from their dashboard.
+- **Feature 3:** Manage Task - User can manage their tasks from "Manage All Task" section.
+- **Feature 4:** View Task - Easily visualize your tasks in a clear and organized table format. Each task is displayed with essential details.
+- **Feature 5:** Delete Tasks - Remove the unnecessary tasks. Just go to "Manage All Task" section and then click on the delete button. You can delete the specific task as well.
+- **Feature 6:** Update Tasks - Modify task details on-the-fly with the ability to edit titles, descriptions, deadlines, and priority levels. Keep your task information accurate and up-to-date.
+- **Feature 7:** Filter Task - Filter task based on their priority levels.
+- **Feature 8:** Categorize Task - You can categorized task as to-do, on-going add completed from the dashboard.
 
 ## How to Use?
 - **Create a Task:** 
@@ -52,10 +52,10 @@ You can access the live version of this project here: [View Site](https://task-m
 
 ## Getting Started:
 
-- **Feature 0:** Clone this Repository: - git clone https://github.com/your-username/task-wave.git
-- **Feature 0:** Navigate to your directory: - ex: cd task-wave
-- **Feature 0:** Install Dependencies: - npm install
-- **Feature 0:** Run the Application:: - npm run dev or npm start
+- **Feature 1:** Clone this Repository: - Clone this repo
+- **Feature 2:** Navigate to your directory: - ex: cd task-wave
+- **Feature 3:** Install Dependencies: - npm install
+- **Feature 4:** Run the Application:: - npm run dev or npm start
 
 ## Code Structure
 

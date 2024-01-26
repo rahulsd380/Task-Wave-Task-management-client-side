@@ -115,24 +115,6 @@ const handleSortByMostImportant = () => {
       }
     });
   };
-
-
-  // const handleMakeOngoing = (item) => {
-  //   axiosUser.patch(`/tasks/ongoing/${item._id}`).then((res) => {
-  //     console.log(res.data);
-  //     const toastId = toast.loading("Updating status...");
-  //     if (res.data.modifiedCount > 0) {
-  //       toast.success(`${item.title} status has been changed to On-going`, {
-  //         id: toastId,
-  //       });
-  //       refetch();
-  //     }
-  //   });
-  // };
-
-
-
-
   const handleMakeOngoing = (item) => {
     axiosUser.patch(`/tasks/ongoing/${item._id}`).then((res) => {
       console.log(res.data);
