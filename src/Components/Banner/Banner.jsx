@@ -1,44 +1,32 @@
-import task from "../../../public/task.json"
-import Lottie from "lottie-react";
-import { TiTick } from "react-icons/ti";
+
 
 const Banner = () => {
     return (
-        <div className="max-w-6xl mx-auto py-10 md:py-0">
- <div className="grid grid-cols-1 md:grid-cols-2 items-center px-5 md:px-0">
-            <div>
+        <div className="max-w-7xl mx-auto py-10">
+                {/* Banner */}
+      <div className="w-full rounded-3xl">
+        <div className="relative w-full rounded-3xl">
+          <img
+            src="https://i.ibb.co/K5KQ61x/glenn-carstens-peters-RLw-UC03-Gwc-unsplash.jpg"
+            className="rounded-3xl h-72 w-full"
+          />
 
-                <h1 className="text-3xl md:text-5xl font-bold leading-[3rem] md:leading-[4rem] bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent mb-5">Unlock Your Productivity<br /> Superpower.<br /> <span className=" text-blue-500">
-                    
-                    </span> </h1>
-                <p className="mb-5">Elevate your expertise. Empowering learners with dynamic courses, personalized paths, and hands-on projects. Unlock your potential, acquire new skills, and thrive in a future driven by continuous learning.</p>
-                
-                <div className="flex items-center">
-                <button className="text-white bg-gradient-to-r from-emerald-300 to-emerald-500 font-semibold  rounded-md h-12 px-6">Let’s Explore</button>
-                </div>
-
-                <div className="flex gap-20 mt-7">
-                <div className="flex items-center gap-3">
-                    <div className="bg-gradient-to-r from-emerald-300 to-emerald-500 text-white text-xl w-8 h-8 rounded-full flex justify-center items-center">
-                        <TiTick></TiTick>
-                    </div>
-                    <p className="text-gray-500">Free All Class Notes</p>
-                </div>
-                <div className="flex items-center gap-3">
-                    <div className="bg-gradient-to-r from-emerald-300 to-emerald-500 text-white text-xl w-8 h-8 rounded-full flex justify-center items-center">
-                        <TiTick></TiTick>
-                    </div>
-                    <p className="text-gray-500">30 Days Free Trial</p>
-                </div>
-                </div>
+          <div className="rounded-3xl absolute top-0 bottom-0 flex items-center px-10 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)]">
+            <div className="space-y-3">
+              <h1 className="text-4xl font-bold textwhite text-white">
+              Elevate Your Efficiency: Revolutionize Task Management with Our Intuitive Platform!
+              </h1>
+              <p className="text-white">
+              Elevate your efficiency with our intuitive platform. Streamline tasks effortlessly, boosting productivity. Join us in revolutionizing your workflow for a seamless and empowered work experience.
+              </p>
+              <button className="bg-teal-600 hover:bg-teal-700 transition duration-300 p-2 rounded-md text-white">
+                Explore More
+              </button>
             </div>
-
-            <div className="w-11/12">
-                <Lottie animationData={task}></Lottie>
-            </div>
+          </div>
         </div>
+      </div>
         </div>
-       
     );
 };
 

@@ -28,7 +28,7 @@ const Drawer2 = () => {
 
   const [todoList, setTodoList] = useState([]);
 
-  const  url = `https://task-management-server-navy.vercel.app/tasks?email=${user?.email}`
+  const  url = `https://task-management-server-delta-three.vercel.app/tasks?email=${user?.email}`
   console.log(todoList);
 
   useEffect( () => {
@@ -69,12 +69,16 @@ const Drawer2 = () => {
           ></label>
 
           
-          <ul className="menu p-4 w-80 min-h-full bg-gradient-to-r from-slate-100 to-emerald-100 text-gray-100">
+          <ul className="menu p-4 w-80 min-h-full bg-gray-800 text-gray-100">
             {/* Sidebar content here */}
-            <div className="flex items-center gap-3 mb-8 border-b border-blue-400 shadow-lg py-2">
-                <img className="w-24" src="https://i.ibb.co/MpNzNfK/skill-dynamo-logo.png" alt="" />
-                <h1 className="text-2xl font-bold text-blue-400">Skill Dynamo</h1>
-                </div>
+            <div className="flex items-center mb-10">
+            <img
+              className="w-10"
+              src="https://i.ibb.co/FBLHBHw/logo.png"
+              alt=""
+            />
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent">TaskWave</h1>
+          </div>
 
                 <div className="flex items-center mb-6">
             <input type="text" placeholder="Find Anything..." className="px-2 h-10 rounded-l-md border-y border-l border-gray-400" />
@@ -85,19 +89,19 @@ const Drawer2 = () => {
 
 
                 <div className="space-y-4">
-                <Link to={"/"} className='text-gray-500 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><GoHome></GoHome> Home</Link>
-                    <NavLink to={"/dashboard/addTask"} className='text-gray-500 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><MdAddCard></MdAddCard>Add New Task</NavLink>
-                    <NavLink to={"/dashboard/allTasks"} className='text-gray-500 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><MdManageHistory></MdManageHistory> Manage All Tasks</NavLink>
+                <Link to={"/"} className='text-gray-300 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><GoHome></GoHome> Home</Link>
+                    <NavLink to={"/dashboard/addTask"} className='text-gray-300 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><MdAddCard></MdAddCard>Add New Task</NavLink>
+                    <NavLink to={"/dashboard/allTasks"} className='text-gray-300 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><MdManageHistory></MdManageHistory> Manage All Tasks</NavLink>
                     <div>
-                    <NavLink to={"/dashboard/herosection"} className='text-gray-500 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3 mb-3'><AiOutlineFundView></AiOutlineFundView> Task Overview</NavLink>
+                    <NavLink to={"/dashboard/herosection"} className='text-gray-300 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3 mb-3'><AiOutlineFundView></AiOutlineFundView> Task Overview</NavLink>
                         <div className="px-7">
-                        <NavLink to={"/dashboard/todo"} className='text-gray-500 text-sm font-semibold hover:text-teal-500 transition duration-300 flex items-center justify-between gap-3 mb-3 border-b border-gray-400 pb-2'><p className="flex items-center gap-3"><FaArrowsTurnToDots className="text-rose-600"></FaArrowsTurnToDots> To-Do</p> <span>({todoLists.length})</span></NavLink>
-                        <NavLink to={"/dashboard/ongoing"} className='text-gray-500 text-sm font-semibold hover:text-teal-500 transition duration-300 flex items-center justify-between gap-3 mb-3 border-b border-gray-400 pb-2'><p className="flex items-center gap-3"><MdCallMissedOutgoing className="text-yellow-600"vvvvvvvvvvvvvvv></MdCallMissedOutgoing> Ongoing</p> <span>({ongoingLists.length})</span></NavLink>
-                        <NavLink to={"/dashboard/completed"} className='text-gray-500 text-sm font-semibold hover:text-teal-500 transition duration-300 flex items-center justify-between gap-3 mb-3 border-b border-gray-400 pb-2'><p className="flex items-center gap-3"><IoCheckmarkDoneCircleSharp className="text-green-600"></IoCheckmarkDoneCircleSharp> Completed</p> <span>({completedLists.length})</span></NavLink>
+                        <NavLink to={"/dashboard/todo"} className='text-gray-300 text-sm font-semibold hover:text-teal-500 transition duration-300 flex items-center justify-between gap-3 mb-3 border-b border-gray-400 pb-2'><p className="flex items-center gap-3"><FaArrowsTurnToDots className="text-rose-600"></FaArrowsTurnToDots> To-Do</p> <span>({todoLists.length})</span></NavLink>
+                        <NavLink to={"/dashboard/ongoing"} className='text-gray-300 text-sm font-semibold hover:text-teal-500 transition duration-300 flex items-center justify-between gap-3 mb-3 border-b border-gray-400 pb-2'><p className="flex items-center gap-3"><MdCallMissedOutgoing className="text-yellow-600"vvvvvvvvvvvvvvv></MdCallMissedOutgoing> Ongoing</p> <span>({ongoingLists.length})</span></NavLink>
+                        <NavLink to={"/dashboard/completed"} className='text-gray-300 text-sm font-semibold hover:text-teal-500 transition duration-300 flex items-center justify-between gap-3 mb-3 border-b border-gray-400 pb-2'><p className="flex items-center gap-3"><IoCheckmarkDoneCircleSharp className="text-green-600"></IoCheckmarkDoneCircleSharp> Completed</p> <span>({completedLists.length})</span></NavLink>
                         </div>
                     </div>
-                    <NavLink to={"/dashboard/calender"} className='text-gray-500 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><SlCalender></SlCalender>Calender</NavLink>
-                    <NavLink to={"/dashboard/manageProducts"} className='text-gray-500 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><IoMdNotificationsOutline></IoMdNotificationsOutline>Notifications</NavLink>
+                    <NavLink to={"/dashboard/calender"} className='text-gray-300 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><SlCalender></SlCalender>Calender</NavLink>
+                    <NavLink to={"/dashboard/manageProducts"} className='text-gray-300 font-semibold hover:text-teal-500 transition duration-300 flex items-center gap-3'><IoMdNotificationsOutline></IoMdNotificationsOutline>Notifications</NavLink>
                 </div>
           </ul>
         </div>

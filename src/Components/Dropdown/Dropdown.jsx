@@ -1,9 +1,11 @@
 import { TbLogout2 } from "react-icons/tb";
 import { BiLogIn } from "react-icons/bi";
 import { Link, useNavigate } from 'react-router-dom';
-import { FaUser, FaUserCircle } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 import { useContext, useState } from 'react';
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { FaRegUser } from "react-icons/fa6";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 const Dropdown = () => {
@@ -14,7 +16,7 @@ const Dropdown = () => {
       logout()
       .then(result => {
         console.log(result.user);
-        navigate('/')
+        navigate('/login')
       })
       .then(error => {
         console.log(error);
@@ -25,7 +27,7 @@ const Dropdown = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-//   console.log(user);
+
 
 
 
@@ -36,12 +38,16 @@ const Dropdown = () => {
         className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium "
         onClick={toggleDropdown}
       >
-        <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-emerald-300 to-emerald-500 text-gray-200 text-2xl">
-                        {
-                            user?.photoURL ? <img src={user?. photoURL} alt="" /> :  <FaUser className="text-xl text-gray-200"></FaUser>
-                        }
-                       
+
+<div className="text-gray-500 flex items-center gap-2 font-semibold hover:text-teal-500 transition duration-300 text-base">
+  
+                        <FaRegUser></FaRegUser>
+                        <p>{user?.displayName}</p>
+                        <IoIosArrowDown></IoIosArrowDown>
                     </div>
+
+
+        
       </button>
 
       {isOpen && (
@@ -50,7 +56,12 @@ const Dropdown = () => {
             <div className='flex justify-center border-b-2 border-teal-400 pb-2 mt-5'>
               <div>
               <div className='flex justify-center'>
-              <FaUserCircle className='text-5xl mb-2 text-teal-500'></FaUserCircle>
+              <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-emerald-300 to-emerald-500 text-gray-200 text-2xl">
+                        {
+                            user?.photoURL ? <img className="rounded-full" src={user?. photoURL} alt="" /> :  <FaUserCircle className='text-5xl mb-2 text-teal-500'></FaUserCircle>
+                        }
+                       
+                    </div>
               </div>
               <h1 className='text-xl font-bold bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent'>{user?.displayName}</h1>
               </div>
@@ -59,13 +70,13 @@ const Dropdown = () => {
                       <Link to={"/dashboard/allTasks"} className="hover:text-teal-500 transition duration-300 text-teal-700 font-semibold mt-7 mb-2 border-b border-blue-900 pb-1">Dashboard</Link> 
                  
 
-                    <Link to={"/userDashboard/teacherDashboard"} className="hover:text-teal-500 transition duration-300 text-teal-700 font-semibold mb-2 border-b border-blue-900 pb-1">Anouncement</Link> 
+                    <Link to={"/userDashboard/teacherDashboard"} className="hover:text-teal-500 transition duration-300 text-teal-700 font-semibold mb-2 border-b border-blue-900 pb-1">View Profile</Link> 
 
                     <Link to={"/userDashboard/teacherDashboard"} className="hover:text-teal-500 transition duration-300 text-teal-700 font-semibold mb-2 border-b border-blue-900 pb-1">Help Center</Link> 
 
 
                     
-            {user? <Link onClick={handleLogout} className='text-teal-700 hover:text-teal-500 transition duration-300 mb-4 text-base font-semibold flex items-center gap-3'>Logout <TbLogout2 className="text-xl"></TbLogout2></Link> :
+            {user? <Link onClick={handleLogout} className='text-teal-600 hover:text-teal-500 transition duration-300 mb-4 text-base font-semibold flex items-center gap-3'>Logout <TbLogout2 className="text-xl"></TbLogout2></Link> :
             <Link to={"/login"} className='text-teal-700 hover:text-teal-500 transition duration-300 mb-4 text-base font-semibold flex items-center gap-3'>Login <BiLogIn className="text-xl"></BiLogIn></Link>}
           </div>
         </div>

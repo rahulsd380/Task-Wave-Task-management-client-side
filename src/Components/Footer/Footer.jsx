@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-r from-slate-100 to-emerald-100 border-t-2 border-teal-300">
+    <div className="bg-gradient-to-r from-slate-100 to-emerald-100 border-t-2">
       <div className="relative z-10">
       <footer className="footer p-10 text-base-content">
         <aside>
@@ -81,7 +81,7 @@ const Footer = () => {
                     </div>
       </div>
       <br />
-      <p className="text-gray-400 text-sm text-center font-semibold">Powered By <span className="bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent">Rahul Sutradhar</span> Skill Dynamo ltd © 2023</p>
+      <p className="text-gray-400 text-sm text-center font-semibold">Powered By <span className="bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent">Rahul Sutradhar</span> Task Wave © 2024</p>
       <br />
       {/* <img src="/src/assets/images/1.png" alt="" /> */}
     </div>

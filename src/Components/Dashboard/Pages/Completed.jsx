@@ -1,43 +1,23 @@
-import { useContext, useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { MdOutlineDateRange } from "react-icons/md";
 import Swal from "sweetalert2";
 import useAxiosClient from "../../Hooks/useAxiosClient";
 import useAllTasks from "../../Hooks/useAllTasks";
 import Header from "./Header";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { TbFaceIdError } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import finding from "../../../../public/finding.json"
 import empty from "../../../../public/empty.json"
+import { IoMdDoneAll } from "react-icons/io";
+import { FaPersonWalkingArrowRight } from "react-icons/fa6";
 
 
 const Completed = () => {
-    const [todoList, setTodoList] = useState([]);
     const axiosUser = useAxiosClient();
-    const [, ,refetch] = useAllTasks();
-    const {user} = useContext(AuthContext)
-    const [isLoading, setIsLoading] = useState(true);
+    const [allTasks, isLoading, refetch] = useAllTasks();
 
 
-
-
-    const  url = `https://task-management-server-navy.vercel.app/tasks?email=${user?.email}`
-    console.log(todoList);
-
-    useEffect( () => {
-        setTimeout(() => {
-            fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                setTodoList(data)
-                setIsLoading(false)
-            })
-        }, 2000)
-    }, [url])
-
-    const completedLists = todoList.filter(list => list.status === 'Completed');
+    const completedLists = allTasks.filter(list => list.status === 'Completed');
 
 
     const handleMakeCompleted = item => {
@@ -57,9 +37,9 @@ const Completed = () => {
         })
     }
     return (
-        <div className="max-w-7xl mx-auto py-10">
+        <div className="max-w-7xl mx-auto pb-10">
             <Header></Header>
-            <h1 className="text-3xl font-bold mb-7 pb-3 border-b text-teal-500">Completed Task List</h1>
+            <h1 className="text-3xl font-bold mb-7 pb-3 border-b text-gray-500 flex items-center gap-2"><IoMdDoneAll className="text-teal-500"></IoMdDoneAll> Completed Task List</h1>
             {
                 isLoading ? <div className="flex justify-center"> <div className="w-48"><Lottie animationData={finding}></Lottie></div> </div>
                 :
